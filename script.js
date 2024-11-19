@@ -17,6 +17,15 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
         return;
     }
 
+    // בדיקת אם מספר פלאפון כולל בדיוק 10 ספרות
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין בדיוק 10 ספרות.";
+        responseMessage.style.display = 'block';
+        return;
+    }
+
     if (!guests) {
         responseMessage.style.color = 'red';
         responseMessage.textContent = "יש להזין כמות מגיעים.";
@@ -24,8 +33,16 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
         return;
     }
 
+    // בדיקת אם כמות המגיעים היא מספר חיובי
+    if (guests < 0) {
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = "כמות המגיעים לא יכולה להיות מספר שלילי.";
+        responseMessage.style.display = 'block';
+        return;
+    }
+
     // שליחת הנתונים ל-Google Sheets דרך ה-Web App
-    fetch("https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbwWSHSC0JHS4QHLe2wFTbl5qRD_T58ZlRkXDwrdd9nxzqEjUctlvfKqKEcd_LtK0NSM/exec", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
