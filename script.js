@@ -21,7 +21,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
     const phonePattern = /^[0-9]{9}$/;
     if (!phonePattern.test(phone)) {
         responseMessage.style.color = 'red';
-        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין 9 ספרות.";
+        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין בדיוק 9 ספרות.";
         responseMessage.style.display = 'block';
         return;
     }
