@@ -1,0 +1,82 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    background-color: #f4e7e2; /* צבע רקע ניוד רך */
+    color: #5a5a5a; /* צבע טקסט אפור כהה */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.card {
+    background: #ffffff; /* לבן רך */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #d4a373; /* גוון ניוד כהה */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #b5838d; /* גוון ורדרד עדין */
+    margin-bottom: 20px;
+}
+
+.date, .venue, .time {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.button {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    background: #d4a373; /* צבע ניוד כהה */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #b5838d; /* שינוי צבע בעת ריחוף */
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="tel"], input[type="number"] {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: calc(100% - 30px);
+    text-align: center;
+    font-size: 1rem;
+}
+
+#response-message {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #d4a373; /* צבע ניוד */
+}

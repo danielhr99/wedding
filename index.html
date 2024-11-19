@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Save the Date</h1>
+            <h2 class="subtitle">תהילה ועדיאל</h2>
+            <p class="date">28 במרץ 2024</p>
+            <p class="venue">אולמי אמור פרימיום, חצור הגלילית</p>
+            <p class="time">19:30 - קבלת פנים</p>
+            <p class="time">20:30 - חופה</p>
+            <p class="time">21:00 - ארוחת ערב וחגיגות</p>
+            <a href="https://www.google.com/maps" target="_blank" class="button">ניווט למקום</a>
+            
+            <form id="rsvp-form">
+                <label for="phone">מספר פלאפון:</label>
+                <input type="tel" id="phone" name="phone" placeholder="050-1234567" required>
+                
+                <label for="guests">כמות המגיעים:</label>
+                <input type="number" id="guests" name="guests" min="0" placeholder="0 - לא מגיעים" required>
+                
+                <button type="submit" class="button">שלח</button>
+            </form>
+            
+            <p id="response-message"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
