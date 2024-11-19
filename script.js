@@ -17,11 +17,11 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
         return;
     }
 
-    // בדיקת אם המספר פלאפון תקין (למשל, לפחות 9 ספרות)
+    // בדיקת אם מספר פלאפון כולל בדיוק 10 ספרות
     const phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
         responseMessage.style.color = 'red';
-        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין בדיוק 9 ספרות.";
+        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין בדיוק 10 ספרות.";
         responseMessage.style.display = 'block';
         return;
     }
