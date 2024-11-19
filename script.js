@@ -18,7 +18,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
     }
 
     // בדיקת אם המספר פלאפון תקין (למשל, לפחות 9 ספרות)
-    const phonePattern = /^[0-9]{9}$/;
+    const phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
         responseMessage.style.color = 'red';
         responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין בדיוק 9 ספרות.";
