@@ -42,7 +42,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
     }
 
     // שליחת הנתונים ל-Google Sheets דרך ה-Web App
-    fetch("https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbwWSHSC0JHS4QHLe2wFTbl5qRD_T58ZlRkXDwrdd9nxzqEjUctlvfKqKEcd_LtK0NSM/exec", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
