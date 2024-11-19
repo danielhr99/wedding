@@ -1,18 +1,18 @@
-// יצירת אפקט זיקוקים
+// הפעלת הזיקוקים לאחר טעינת הדף
 window.onload = function() {
     const fireworks = new Fireworks({
-        selector: '.container', // המיכל שבו יופיעו הזיקוקים
-        hue: { min: 0, max: 360 }, // צבעים משתנים
+        selector: '.container',  // המיכל שבו יופיעו הזיקוקים
+        hue: { min: 0, max: 360 }, // הגדרת הצבעים של הזיקוקים
         delay: { min: 10, max: 30 }, // עיכוב בין זיקוקים
         speed: 3, // מהירות הזיקוקים
         acceleration: 2, // קצב התפשטות הזיקוקים
         friction: 0.95, // חיכוך
         gravity: 1, // כוח המשיכה
-        particles: 100, // כמות הזיקוקים בכל פעם
+        particles: 100, // כמות הזיקוקים
     });
     fireworks.start(); // הפעלת הזיקוקים
 
-    // שליחת נתונים מהטופס לאחר אישור
+    // טיפול בטופס אישור הגעה
     document.getElementById('rsvp-form').addEventListener('submit', function (event) {
         event.preventDefault(); // מונע רענון של הדף
 
