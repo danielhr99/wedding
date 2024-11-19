@@ -17,9 +17,26 @@ document.getElementById('rsvp-form').addEventListener('submit', function (event)
         return;
     }
 
+    // בדיקת אם המספר פלאפון תקין (למשל, לפחות 9 ספרות)
+    const phonePattern = /^[0-9]{9}$/;
+    if (!phonePattern.test(phone)) {
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = "מספר הפלאפון לא תקין. יש להזין 9 ספרות.";
+        responseMessage.style.display = 'block';
+        return;
+    }
+
     if (!guests) {
         responseMessage.style.color = 'red';
         responseMessage.textContent = "יש להזין כמות מגיעים.";
+        responseMessage.style.display = 'block';
+        return;
+    }
+
+    // בדיקת אם כמות המגיעים היא מספר חיובי
+    if (guests < 0) {
+        responseMessage.style.color = 'red';
+        responseMessage.textContent = "כמות המגיעים לא יכולה להיות מספר שלילי.";
         responseMessage.style.display = 'block';
         return;
     }
